@@ -1,9 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        URL_TEST1 = "${env.URL_TEST}"
-    }
     stages {
         stage("build"){
             steps{
