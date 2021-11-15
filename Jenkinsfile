@@ -6,15 +6,12 @@ pipeline {
     stages {
         stage("build"){
             steps{
-                withCredentials([string(credentialsId:'NAME_TEXT', variable: 'NAME_SECRET')]){
-                    sh ('echo ${env.NAME_SECRET}')
-                    sh ('echo ${NAME_SECRET}')
-                }
+
 
                 echo 'building the application'
                 echo '================================'
                 
-                sh ('echo ${NAME_KEYS}')
+                sh ('echo $NAME_KEYS')
                
                 echo '================================'
                
