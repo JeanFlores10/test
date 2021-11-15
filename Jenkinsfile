@@ -6,7 +6,7 @@ pipeline {
                 echo 'building the application'
                 echo '================================'
                 
-                echo "BUILD_NUMBER = ${BUILD_NUMBER}"
+                echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
                 
                 echo '================================'
                
