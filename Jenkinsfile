@@ -38,5 +38,5 @@ pipeline {
 
 def getURL(){
     
-    echo "my name is ${env.NAME_KEYS}"
+    echo "my name is ${env.NAME_KEYS} and my lastname is ${env.LASTNAME} and "
 }
