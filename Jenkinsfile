@@ -14,7 +14,7 @@ pipeline {
                 echo 'building the application'
                 echo '================================'
 
-                fullname = getURL()
+                fullname = getURL(${NAME_KEYS}, ${LASTNAME})
 
                 echo "${fullname}"
                
@@ -38,6 +38,6 @@ pipeline {
     }
 }
 
-def getURL(){
-    echo "my name is ${env.NAME_KEYS} and my lastname is ${env.LASTNAME}"
+def getURL(name, lastname){
+    echo "my name is ${name} and my lastname is ${lastname}"
 }
