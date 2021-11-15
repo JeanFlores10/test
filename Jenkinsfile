@@ -4,8 +4,8 @@ pipeline {
         stage("build"){
             steps{
                 withCredentials([string(credentialsId:'NAME_TEXT', variable: 'NAME_SECRET')]){
-                    echo 'NAME = ${NAME_SECRET}'
-                    echo ' my name is ${NAME_SECRET}'
+                    echo 'NAME = $NAME_SECRET'
+                    echo ' my name is $NAME_SECRET'
                 }
 
                 echo 'building the application'
