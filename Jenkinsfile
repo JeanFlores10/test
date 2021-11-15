@@ -1,3 +1,5 @@
+
+def fullname = null
 pipeline {
     agent any
     environment{
@@ -12,7 +14,9 @@ pipeline {
                 echo 'building the application'
                 echo '================================'
 
-                echo "my name is ${NAME_KEYS} and my lastname is ${LASTNAME}"
+                fullname = getURL()
+
+                echo "${fullname}"
                
                 echo '================================'
                
@@ -34,3 +38,6 @@ pipeline {
     }
 }
 
+def getURL(){
+    echo "my name is ${NAME_KEYS} and my lastname is ${LASTNAME}"
+}
