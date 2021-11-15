@@ -1,1 +1,22 @@
 
+import groovy.json.JsonSluperClassic
+
+def jsonParse(def json){
+    new groovy.json.JsonSluperClassic().parseText(json)
+}
+pipeline{
+    agent { label 'master'}
+    environment {
+        appName = "variable"
+    }
+    stages {
+        stage("paso 1"){
+            steps {
+                script{
+                    sh "echo 'hello world'"
+                }
+            }
+        }
+    }
+    
+}
