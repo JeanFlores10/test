@@ -1,12 +1,1 @@
-
-    stages {
-        stage("paso 1"){
-            steps {
-                script{
-                    sh "echo 'hello world'"
-                }
-            }
-        }
-    }
-    
-}
+echo "hello world"
