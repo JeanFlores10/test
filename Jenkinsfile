@@ -9,6 +9,10 @@ pipeline {
                 echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
                 
                 echo "URL_GIT = ${env.GIT_URL}"
+                
+                echo "NAME = ${env.NAME_TEXT}"
+                
+                echo "LAST_NAME = ${env.LAST_NAME}"
                 echo '================================'
                
             }
