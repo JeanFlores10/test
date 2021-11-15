@@ -4,7 +4,8 @@ pipeline {
         stage("build"){
             steps{
                 echo 'building the application'
-                echo "SECRET_URL = ${env.GIT_URL}"
+                echo "SECRET_URL = ${env.GIT_URL}eee"
+                echo "URL_TEST = ${env.URL_TEST}test/hello" 
                 echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
             }
         }
