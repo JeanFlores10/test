@@ -9,11 +9,11 @@ pipeline {
         stage("build"){
             steps{
 
-
+                def add = "Sayan";
                 echo 'building the application'
                 echo '================================'
                
-                getURL()
+                getURL(add);
 
                 echo '================================'
                
@@ -35,7 +35,7 @@ pipeline {
     }
 }
 
-def getURL(){
+def getURL(address){
     
-    echo "my name is ${NAME_KEYS} and my lastname is ${LASTNAME} and "
+    echo "my name is ${NAME_KEYS} and my lastname is ${LASTNAME} and my direction is ${address}"
 }
