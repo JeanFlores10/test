@@ -4,8 +4,6 @@ pipeline {
         stage("build"){
             steps{
                 echo 'building the application'
-                echo "URL_TEST = ${URL_TEST}"
-                echo "BUILD_NUMBEr = ${env.BUILD_NUMBER}"
             }
         }
 
