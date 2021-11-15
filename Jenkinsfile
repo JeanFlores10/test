@@ -11,7 +11,7 @@ pipeline {
                 echo 'building the application'
                 echo '================================'
                 
-                echo "${NAME_KEYS}"
+                "${NAME_KEYS}"
                
                 echo '================================'
                
