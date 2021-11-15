@@ -4,6 +4,12 @@ pipeline {
         stage("build"){
             steps{
                 echo 'building the application'
+                echo '================================'
+                
+                echo "BUILD_NUMBER = ${BUILD_NUMBER}"
+                
+                echo '================================'
+               
             }
         }
 
