@@ -1,11 +1,14 @@
 pipeline {
     agent any
+    environment{
+        NAME_KEYS = credentials('NAME_TEXT')
+    }
     stages {
         stage("build"){
             steps{
                 withCredentials([string(credentialsId:'NAME_TEXT', variable: 'NAME_SECRET')]){
-                    sh 'echo NAME = %env.NAME_SECRET%'
-                    sh 'echo NAMES = %NAME_SECRET%'
+                    sh "echo NAME = ${env.NAME_SECRET}"
+                    sh "echo NAMES = ${NAME_SECRET}"
                 }
 
                 echo 'building the application'
@@ -15,7 +18,7 @@ pipeline {
                 
                 echo "URL_GIT = ${env.GIT_URL}"
                 
-                echo "NAME = ${env.NAME_SECRET}"
+                echo "NAME = ${env.NAME_KEYS}"
                 
                 echo "LAST_NAME = ${env.LAST_NAME}"
                 echo '================================'
