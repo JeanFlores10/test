@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("build"){
             steps{
-
+                script{
                 def add = "Sayan";
                 echo 'building the application'
                 echo '================================'
@@ -16,7 +16,7 @@ pipeline {
                 getURL(add);
 
                 echo '================================'
-               
+                }
             }
         }
 
