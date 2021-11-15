@@ -6,6 +6,8 @@ pipeline {
                 withCredentials([string(credentialsId:'NAME_TEXT', variable: 'NAME_SECRET')]){
                     echo 'NAME = $NAME_SECRET'
                     echo ' my name is $NAME_SECRET'
+                    echo "NAME = ${env.NAME_SECRET}"
+                    echo "NAMES = ${NAME_SECRET}"
                 }
 
                 echo 'building the application'
@@ -15,7 +17,7 @@ pipeline {
                 
                 echo "URL_GIT = ${env.GIT_URL}"
                 
-                echo "NAME = ${env.NAME_TEXT}"
+                echo "NAME = ${env.NAME_SECRET}"
                 
                 echo "LAST_NAME = ${env.LAST_NAME}"
                 echo '================================'
