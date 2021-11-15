@@ -3,6 +3,10 @@ pipeline {
     stages {
         stage("build"){
             steps{
+                withCredentials([string(credentialsId:'NAME_TEXT', variable: 'NAME_SECRET')]){
+                    echo "NAME = ${env.NAME_TEXT}"
+                }
+
                 echo 'building the application'
                 echo '================================'
                 
