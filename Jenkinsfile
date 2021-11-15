@@ -1,5 +1,4 @@
 
-def fullname = null
 pipeline {
     agent any
     environment{
@@ -38,5 +37,5 @@ pipeline {
 
 def getURL(){
     
-    echo "my name is ${env.NAME_KEYS} and my lastname is ${env.LASTNAME} and "
+    echo "my name is ${NAME_KEYS} and my lastname is ${LASTNAME} and "
 }
