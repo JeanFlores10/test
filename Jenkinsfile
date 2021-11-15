@@ -8,6 +8,7 @@ pipeline {
                 
                 echo "BUILD_NUMBER = ${env.BUILD_NUMBER}"
                 
+                echo "URL_GIT = ${env.GIT_URL}"
                 echo '================================'
                
             }
