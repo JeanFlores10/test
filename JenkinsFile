@@ -1,9 +1,4 @@
 
-pipeline{
-    agent { label 'master'}
-    environment {
-        appName = "variable"
-    }
     stages {
         stage("paso 1"){
             steps {
