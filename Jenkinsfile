@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment{
         NAME_KEYS = credentials('NAME_TEXT')
+        LASTNAME = credentials('LAST_NAME')
     }
     stages {
         stage("build"){
@@ -10,8 +11,8 @@ pipeline {
 
                 echo 'building the application'
                 echo '================================'
-                
-                "${NAME_KEYS}"
+
+                echo "my name is ${NAME_KEYS} and my lastname is ${LASTNAME}"
                
                 echo '================================'
                
